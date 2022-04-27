@@ -13,7 +13,6 @@ class ResPartner(models.Model):
     delay_calendar_type = fields.Selection(
         [("natural", "Natural days"), ("supplier_calendar", "Supplier Calendar")],
         default="natural",
-        required=True,
     )
 
     @api.onchange("delay_calendar_type")
